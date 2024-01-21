@@ -1,16 +1,16 @@
-import { contactUsIcon } from "./contactUsIcon";
-import { cartIcon } from "./cartIcon";
-import { menuIcon } from "./menuIcon";
-import { profileIcon } from "./profileIcon";
-import { searchIcon } from "./searchIcon";
-import { wishListIcon } from "./wishListIcon";
+export *  from "./ContactUsIcon";
+export * from "./CartIcon";
+export * from "./MenuIcon";
+export *  from "./ProfileIcon";
+export * from "./SearchIcon";
+export *  from "./WishListIcon";
 
+// export {
+//   WishListIcon,
+//   ContactUsIcon,
+//   CartIcon,
+//   MenuIcon,
+//   ProfileIcon,
+//   SearchIcon,
+// };
 
-export  {
-wishListIcon,
-contactUsIcon,
-cartIcon,
-menuIcon,
-profileIcon,
-searchIcon
-}

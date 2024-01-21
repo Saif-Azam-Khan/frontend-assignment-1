@@ -1,4 +1,4 @@
-export const menuIcon = (
+export const MenuIcon = ()=>
   <svg
     width="18"
     height="16"
@@ -8,4 +8,4 @@ export const menuIcon = (
   >
     <path d="M13 14V16H2V14H13ZM18 7V9H0V7H18ZM16 0V2H5V0H16Z" fill="#770015" />
   </svg>
-);
+
