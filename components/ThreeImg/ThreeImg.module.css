@@ -1,0 +1,12 @@
+.background {
+  position: relative;
+  display: inline;
+  /* z-index: -10; */
+}
+
+.background_img {
+    position: absolute;
+    vertical-align: bottom;
+    /* z-index: 10; */
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,76 @@
+.hr-text {
+  border: 0;
+
+  position: relative;
+  text-align: center;
+  height: 1.5em;
+  font-size: 36px;
+  margin: 30px 15px;
+  font-family: Playfair Display;
+  font-weight: 600;
+  letter-spacing: 0em;
+}
+
+.hr-text::before {
+  content: "";
+  background: #ffc7d1;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+
+.hr-text::after {
+  content: attr(data-content);
+  position: relative;
+  padding: 0 7px;
+  line-height: 48px;
+  color: #1c1c1c;
+  background-color: #ffffff;
+}
+
+.original_price {
+  position: absolute;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  color: #ff0000;
+}
+
+.price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #1f1f1f;
+}
+.description {
+  font: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #1c1c1c;
+}
+.card {
+  box-shadow: none;
+}
+.button {
+  border-radius: 0;
+  background: #770015;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+}

@@ -17,9 +17,9 @@ import styles from "./Navbar.module.css";
 
 export default function NavBar() {
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" className={styles.main}>
       <Toolbar variant="dense" className={styles.upperNav}>
-        <div className={styles["main-container"]}>
+        <div className={styles.nav_container}>
           <Typography color="inherit" component="div">
             Welcome to Our Store Hiscraves
           </Typography>
@@ -30,7 +30,7 @@ export default function NavBar() {
       </Toolbar>
 
       <Toolbar className={styles.lowerNav}>
-        <div className={styles["main-container"]}>
+        <div className={styles.nav_container}>
           <div>
             <IconButton
               size="large"

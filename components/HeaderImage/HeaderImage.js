@@ -3,7 +3,7 @@ import styles from "./HeaderImage.module.css"
 import image from "../../public/headerImg.png"
 function HeaderImage() {
   return (
-    <div>
+    <div className={styles.container}>
       <Image
         src={image}
         alt="headerImg"

@@ -1,5 +1,8 @@
 .header-image {
-    height: 632px;
-    width: 100vw;
-  }
-
+    width: 100%; /* Ensure the image doesn't exceed its container width */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,37 +1,44 @@
-
 import Head from "next/head";
-// import { useClient } from "next/data-client";
 import styles from "./page.module.css";
 import NavBar from "@/components/Navbar/Navbar";
 import HeaderImage from "@/components/HeaderImage/HeaderImage";
 import { Container } from "@mui/material";
 import CircleImg from "@/components/CircleImg/CircleImg";
 import ImageTiles from "@/components/ImageTiles/ImageTiles";
-import Carousel from "@/components/Carousel/Carousel";
+import Carousel from "@/sharedComponents/Carousel/Carousel";
+import Banner from "@/sharedComponents/Banner/Banner";
+import ThreeImg from "@/components/ThreeImg/ThreeImg";
 
 export default function Home() {
-  // useClient()
   return (
     <main>
       <Head>
         <title>E-comm</title>
       </Head>
-      <>
+      <div className={styles.main}>
         <NavBar />
-        <HeaderImage/>
+        <HeaderImage />
         <br></br>
         <br></br>
         <Container>
-          <CircleImg/>
+          <CircleImg />
           <br></br>
           <br></br>
           <br></br>
-          <ImageTiles/>
+          <ImageTiles />
           <br></br>
-          <Carousel tags="trending" heading="Trending T-Shirts"/>
-          <Carousel tags="featured" heading="Featured Products"/>
+          <Carousel tags="trending" heading="Trending T-Shirts" />
+          <Carousel tags="featured" heading="Featured Products" />
         </Container>
-      </>
+        <br></br>
+          <Banner order="1" />
+          <br></br>
+          <Banner order="2" />
+          <br></br>
+          <Container>
+            <ThreeImg/>
+          </Container>
+      </div>
     </main>
   );
 }

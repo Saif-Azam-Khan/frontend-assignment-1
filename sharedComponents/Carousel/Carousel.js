@@ -1,13 +1,12 @@
-// import { useState } from "react";
-import styles from "./Card.module.css";
+import { sizeImg } from "@/public/cardImg";
+import styles from "./Carousel.module.css";
 import { cardData } from "@/utils/data/card";
 import { Button, Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Image from "next/image";
 
-function CardItem(tag) {
-  // const [card, setCard] = useState([]);
+function Carousel({ tag = "trending", heading = "Trending T-Shirts" }) {
   let dataToShow = [];
   if (tag === "trending") {
     dataToShow = cardData.filter((e) => e.tag === "trending");
@@ -17,11 +16,13 @@ function CardItem(tag) {
 
   return (
     <>
+      <hr className={styles["hr-text"]} data-content={heading} />
+      <br></br>
       <Grid container spacing={2}>
         {dataToShow.map((item, index) => (
-          <Grid item md={3} xs={3}>
-            <Card key={index}>
-              <Image src={item.imgUrl} />
+          <Grid item md={3} xs={3} key={index}>
+            <Card className={styles.card}>
+              <Image src={item.imgUrl} alt="card image"/>
               <CardContent>
                 <span className={styles.description}>{item.description}</span>
                 <br></br>
@@ -38,6 +39,10 @@ function CardItem(tag) {
                       {item.original_price}
                     </span>
                   </Grid>
+                  <Grid item>
+                    <br></br>
+                    <Image src={sizeImg} alt="size chart"/>
+                  </Grid>
                 </Grid>
               </CardContent>
             </Card>
@@ -45,9 +50,10 @@ function CardItem(tag) {
         ))}
       </Grid>
       <br></br>
-      <Button>VIEW all</Button>
+      <Button className={styles.button}>VIEW all</Button>
+      <br></br>
     </>
   );
 }
 
-export default CardItem;
+export default Carousel;
